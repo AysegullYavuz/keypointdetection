@@ -3,14 +3,12 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-# Kullanıcının belirteceği klasör yolu
 extracted_folder = input("Lütfen resimlerin bulunduğu klasörün yolunu girin: ")
 
-# Nesne resmini yükle
 obj_img_path = os.path.join(extracted_folder, 'cilek.jpg')  # Nesne resminizin adı
 obj_img = cv2.imread(obj_img_path, cv2.IMREAD_GRAYSCALE)
 
-# Referans resimleri yükle (grayscale olarak)
+# Referans resimleri yükle grayscale olarak
 ref_img_paths = [
     os.path.join(extracted_folder, 'cilek2.jpg'),
     os.path.join(extracted_folder, 'cilek3.jpg'),
